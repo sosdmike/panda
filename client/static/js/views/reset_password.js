@@ -15,7 +15,7 @@ PANDA.views.ResetPassword = Backbone.View.extend({
         this.activation_key = activation_key;
 
         $.ajax({
-            url: '/check_activation_key/' + activation_key,
+            url: '/check_activation_key/' + activation_key + '/',
             dataType: 'json',
             type: 'GET',
             success: _.bind(function(data, status, xhr) {
